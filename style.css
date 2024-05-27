@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Importing Poopins Font from Google Font */
+
+* {
+    /* Sellecting everything and giving a root style */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.main-body {
+    background: #282c34;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0.2rem;
+    /* This is added to solve the bug "Margin of child is applied to this parent element */
+    animation-name: backgroundColorPalette;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    /* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
+}
+
+@keyframes backgroundColorPalette {
+    0% {
+        background: #282c34;
+        /*#ee6055*/
+    }
+
+    /* 25% {
+        background: #097a34;
+    } */
+
+    50% {
+        background: #0d187f;
+    }
+
+    /* 75% {
+        background: #837dff;
+    } */
+
+    100% {
+        background: #ce0e61;
+    }
+}
+
+
+.main-heading {
+    text-align: center;
+    margin-top: 2.3rem;
+    font-size: 40px !important;
+    font-weight: 700;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+.weatherApp-card {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    width: 90%;
+    max-width: 30rem;
+    height: 35rem;
+    margin: 4rem auto 0;
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    background: #ebfffc;
+    border: 0;
+    border-radius: 5px;
+    outline-color: pink;
+    color: #555;
+    padding: 9px 21px;
+    margin-right: 16px;
+    height: 3rem;
+    flex: 1;
+    font-size: 14px;
+}
+
+.search button {
+    background: #ebfffc;
+    border: 0;
+    border-radius: 5px;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.search button:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.search button:active {
+    box-shadow:
+        7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transform: translateY(1px);
+    /* Moving button 4px to y-axis */
+}
+
+.weatherIcon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h2 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-top: -5px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.col p {
+    font-size: 17px !important;
+    margin-top: 0px !important;
+}
